@@ -6,7 +6,9 @@ services:
     ports:
       - 9042:9042
   kong:
-    build: .
+    build:
+      context: .
+      dockerfile: kong.Dockerfile
     environment:
       - KONG_DATABASE=cassandra
       - KONG_CASSANDRA_CONTACT_POINTS=kong-database
@@ -22,4 +24,19 @@ services:
     image: pantsel/konga:latest
     ports:
       - 1337:1337
+  
+  product-service:
+    build:
+      context: .
+      dockerfile: product.Dockerfile
+    ports:
+      - 3000:3000
+    tty: true
+
+  order-service:
+    build:
+      context: .
+      dockerfile: order.Dockerfile
+    ports:
+      - 8087:8087
 

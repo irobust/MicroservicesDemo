@@ -28,7 +28,7 @@ Start Kong
 docker run -d --name kong --network=kong-net -e "KONG_DATABASE=cassandra" -e "KONG_CASSANDRA_CONTACT_POINTS=kong-database" -e "KONG_ADMIN_LISTEN=0.0.0.0:8001" -p 8000:8000 -p 8001:8001 -p 8443:8443 -p 8444:8444 kong:latest
 ```
 
-Create Fake Service
+Create Fake Product Service with Json-Server
 1. Share file api.js เข้าไปใน container(สำหรับ docker ที่ run ผ่าน Hyper-V)
 2. ติดตั้ง Faker
 ``` 
@@ -36,14 +36,27 @@ npm install faker
 ```
 3. Mock Product Service ด้วย Json-server
 ```
-docker run --name product-service --network kong-net  -p 3000:3000 -v %cd%/data williamyeh/json-server api.js
+docker run --name product-service --network kong-net  -p 3000:3000 -v ${PWD}/data williamyeh/json-server api.js
+```
+
+Create Fake Order Service with Snowboard
+```
+docker run -it -v ${PWD}:/doc -p 8087:8087 --rm quay.io/bukalapak/snowboard mock order.apib
 ```
 
 
 ## Docker Compose
+Start docker compose ด้วยคำสั่ง
 ```
 docker-compose up -d
 ```
+
+### Docker Compose Services
+1. Kong Database (Cassandra)
+2. Kong
+3. Konga (GUI for manage Kong)
+4. Product Service (Json-server)
+5. Order Services (apiblueprint)
 
 ## Kong Ports
 * 8000 -> Gateway
