@@ -2,6 +2,12 @@
 การสร้าง MicroServices ด้วย Greenfield Approach(ไม่เคยมีระบบเดิมมาก่อน) ดังนั้นเราจะเริ่มต้นด้วยขั้นตอนต่างๆ ดังนี้
 
 ## Steps to create MicroServices
+1. Bounded Context
+2. Create Contract
+3. Mocking Services
+4. Implementing Service (Coding)
+5. Integration Test
+
 ### Bounded Context
 สร้าง Flow การทำงานก่อนด้วย post-it สีม่วง แล้วใส่ application services (สีฟ้า) ที่ต้องมีเข้าไป สุดท้ายจับรวม services ต่างๆเข้าไปอยู่ใน context ด้วย post-it สีเหลือง
     - Context
