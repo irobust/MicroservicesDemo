@@ -26,22 +26,22 @@
 ### Mocking service
 เมื่อเราได้่ Contract มาแล้วเราสามารถนำ Contract นั้นมาสร้าง Mockup หรือ API ตัวปลอมๆ ขึ้นมาได้ด้วยเครื่องมือต่างๆ ดังนี้
 
-    - Mocking apiblueprint
-        * drakov
-        * snowboard
+* Mocking apiblueprint
+    * drakov
+    * snowboard
 
-    - Mocking openAPI
-        * prism
+* Mocking openAPI
+    * prism
 
-    - Mocking แบบไม่มี contract (ใช้ในกรณีที่เราต้องคุยกับ services ที่ยังไม่มี contract หรือ services ภายนอก)
-        * json-server
+* Mocking แบบไม่มี contract (ใช้ในกรณีที่เราต้องคุยกับ services ที่ยังไม่มี contract หรือ services ภายนอก)
+    * json-server
 
 #### Contract Test
 การสร้าง contract ต้องมั่นใจว่าตรงกับ API จริงๆ ดังนั้นต้องมีการทดสอบ contract อยู่เสมอเพื่อให้มั่นใจว่าเรา API ที่สร้่างขึ้นกับ contract ที่ประกาศไว้นั้นยังตรงกันอยู่จึงเป็นที่มาของ contact test
-    - dredd (Recommended)
-    - pact
+* dredd (Recommended)
+* pact
 
 #### Integration Test (API Testing)
 เมื่อเราสร้าง API ขึ้นมาแล้ว จะยังไม่สามารถทำทุกอย่างให้เสร็จภายใน service เดียวได้ เพราะเรากำลังสร้าง MicroServices ดังนั้นเราเลยต้องทำการทดสอบการทำงานร่วมกับ service อื่นๆ ด้วยเครื่องมือต่างๆ ดังนี้
-    - Postman + newman (Recommend)
-    - Soap UI
+* Postman + newman (Recommend)
+* Soap UI
