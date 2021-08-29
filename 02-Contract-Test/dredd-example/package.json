@@ -1,0 +1,28 @@
+{
+  "name": "dredd-example",
+  "nicename": "Dredd Example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Example application using Dredd and CI",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:apiaryio/dredd-example.git"
+  },
+  "author": "Apiary Czech Republic, s.r.o. <support@apiary.io>",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm run test:apiblueprint && npm run test:openapi2",
+    "test:apiblueprint": "dredd --config=./apiblueprint/dredd.yml",
+    "test:openapi2": "dredd --config=./openapi2/dredd.yml"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "express": "4.17.1",
+    "express-mongo-db": "2.0.4"
+  },
+  "devDependencies": {
+    "dredd": "13.1.1",
+    "mongodb": "3.3.3"
+  }
+}

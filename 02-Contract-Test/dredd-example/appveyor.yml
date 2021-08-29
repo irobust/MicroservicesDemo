@@ -1,0 +1,15 @@
+environment:
+  nodejs_version: ""
+services:
+  - "mongodb"
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - "set PATH=%APPDATA%\\npm;%PATH%"
+  - "npm install --no-optional"
+build: off
+before_test:
+  - "node --version"
+  - "npm --version"
+  - "npm info dredd version"
+test_script:
+  - "npm test"

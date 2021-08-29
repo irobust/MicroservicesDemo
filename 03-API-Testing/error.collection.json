@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "d58485f1-e4c4-44c7-91af-53cc1908560d",
+		"name": "Gist Fox API",
+		"description": "Gist Fox API is a sample pastes service similar to http://gist.github.com.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gists",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "star",
+							"item": [
+								{
+									"name": "Get Check If a Gist Is Starred_",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gists/:id/star",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gists",
+												":id",
+												"star"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "42",
+													"description": "(Required) ID of the Gist"
+												}
+											]
+										},
+										"description": "Gist's starred status."
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gists/:id/star",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gists",
+														":id",
+														"star"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"gist_id\": \"reprehenderit dolore\",\n \"starred\": true,\n \"_links\": {\n  \"self\": {\n   \"href\": \"ex\",\n   \"templated\": false\n  }\n }\n}"
+										}
+									]
+								},
+								{
+									"name": "Put Star a Gist_",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gists/:id/star",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gists",
+												":id",
+												"star"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "42",
+													"description": "(Required) ID of the Gist"
+												}
+											]
+										},
+										"description": "Gist's starred status."
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gists/:id/star",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gists",
+														":id",
+														"star"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Delete Unstar a Gist_",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gists/:id/star",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gists",
+												":id",
+												"star"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "42",
+													"description": "(Required) ID of the Gist"
+												}
+											]
+										},
+										"description": "Gist's starred status."
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gists/:id/star",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gists",
+														":id",
+														"star"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Get Retrieve a Single Gist_",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check result of creating a gist\", function () {",
+											"    var gist = pm.response.json();",
+											"    pm.expect(gist.id).to.eql(\"43\");",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/gists/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"gists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "42",
+											"description": "(Required) ID of the Gist"
+										}
+									]
+								},
+								"description": "A single Gist object. The Gist resource is the central resource in the Gist Fox API. It represents one paste - a single text note."
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gists/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"created_at\": \"aliqua nisi\",\n \"description\": \"sunt tempor aute magna in\",\n \"content\": \"voluptate ad pariatur in occaecat\",\n \"id\": \"anim\",\n \"_links\": {\n  \"self\": {\n   \"href\": \"tempor pariatur\",\n   \"templated\": true\n  },\n  \"star\": {\n   \"href\": \"ut voluptate minim\",\n   \"templated\": true\n  }\n }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Delete a Gist_",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/gists/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"gists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "42",
+											"description": "(Required) ID of the Gist"
+										}
+									]
+								},
+								"description": "A single Gist object. The Gist resource is the central resource in the Gist Fox API. It represents one paste - a single text note."
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gists/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Patch Edit a Gist_",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\": \"est dolore pariatur\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/gists/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"gists",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "42",
+											"description": "(Required) ID of the Gist"
+										}
+									]
+								},
+								"description": "A single Gist object. The Gist resource is the central resource in the Gist Fox API. It represents one paste - a single text note."
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"content\": \"est dolore pariatur\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/gists/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gists",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"created_at\": \"aliqua nisi\",\n \"description\": \"sunt tempor aute magna in\",\n \"content\": \"voluptate ad pariatur in occaecat\",\n \"id\": \"anim\",\n \"_links\": {\n  \"self\": {\n   \"href\": \"tempor pariatur\",\n   \"templated\": true\n  },\n  \"star\": {\n   \"href\": \"ut voluptate minim\",\n   \"templated\": true\n  }\n }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get List All Gists_",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Can add a new gist\", function(){",
+									"   const gists = pm.response.json()._embedded.gists;",
+									"   pm.expect(gists.every((gist) => {",
+									"       console.log(gist);",
+									"       return gist.id != \"42\";",
+									"   })).to.be.true",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/gists?since=-56505419.386168264",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gists"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "-56505419.386168264",
+									"description": "Timestamp in unix time format. Only Gists updated at or after this time are returned."
+								}
+							]
+						},
+						"description": "Collection of Gists."
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/gists?since=-56505419.386168264",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"gists"
+									],
+									"query": [
+										{
+											"key": "since",
+											"value": "-56505419.386168264"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"est elit\",\n   \"templated\": false\n  }\n },\n \"_embedded\": {\n  \"gists\": [\n   {\n    \"created_at\": \"consectetu\",\n    \"description\": \"ut sit in\",\n    \"content\": \"in\",\n    \"id\": \"enim voluptate\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"culpa\",\n      \"templated\": false\n     },\n     \"star\": {\n      \"href\": \"Excepteur enim quis elit\",\n      \"templated\": true\n     }\n    }\n   },\n   {\n    \"created_at\": \"ut ullamco Excep\",\n    \"description\": \"reprehen\",\n    \"content\": \"sit commodo\",\n    \"id\": \"qui id\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"sed eu veniam\",\n      \"templated\": true\n     },\n     \"star\": {\n      \"href\": \"do laborum mollit in\",\n      \"templated\": false\n     }\n    }\n   }\n  ]\n },\n \"total\": 29094994.394481957\n}"
+						}
+					]
+				},
+				{
+					"name": "Post Create a Gist_",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"42\",\n    \"description\": \"{{$randomLoremSentences}}\",\n    \"content\": \"{{$randomLoremSentence}}\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/gists?since=-56505419.386168264",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"gists"
+							],
+							"query": [
+								{
+									"key": "since",
+									"value": "-56505419.386168264",
+									"description": "Timestamp in unix time format. Only Gists updated at or after this time are returned."
+								}
+							]
+						},
+						"description": "Collection of Gists."
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"anim\",\n    \"content\": \"nulla culpa\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/gists?since=-56505419.386168264",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"gists"
+									],
+									"query": [
+										{
+											"key": "since",
+											"value": "-56505419.386168264"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"created_at\": \"aliqua nisi\",\n \"description\": \"sunt tempor aute magna in\",\n \"content\": \"voluptate ad pariatur in occaecat\",\n \"id\": \"anim\",\n \"_links\": {\n  \"self\": {\n   \"href\": \"tempor pariatur\",\n   \"templated\": true\n  },\n  \"star\": {\n   \"href\": \"ut voluptate minim\",\n   \"templated\": true\n  }\n }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Get Retrieve the Entry Point_",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Gist Fox API entry point. Provides initial API affordances in the form of the HTTP Link header and HAL links."
+			},
+			"response": [
+				{
+					"name": "Untitled Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"proident enim nisi\",\n   \"templated\": true\n  },\n  \"gists\": {\n   \"href\": \"est dolore\",\n   \"templated\": true\n  }\n }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://host.docker.internal:3000"
+		}
+	]
+}

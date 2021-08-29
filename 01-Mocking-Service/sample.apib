@@ -1,0 +1,75 @@
+FORMAT: 1A
+HOST: https://localhost:3000/api/v1
+
+# Demo06
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Order Collection [/order]
+
+### List All Orders [GET]
+        
++ Response 200 (application/json)
+
+        [
+            {
+                "customer": "John Doe",
+                "ordered_date": "2015-08-05T08:40:51.620Z",
+                "items": [
+                    {
+                        "product": "Product A",
+                        "qty": 1
+                    }, {
+                        "product": "Product B",
+                        "qty": 10
+                    }, {
+                        "product": "Product C",
+                        "qty": 5
+                    }, {
+                        "product": "Product D",
+                        "qty": 100
+                    }
+                ]
+            }
+        ]
+
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "product": "Product D",
+            "qty": 5
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /order/2
+
+    + Body
+
+            {
+                "customer": "John Doe",
+                "ordered_date": "2015-08-05T08:40:51.620Z",
+                "items": [
+                    {
+                        "product": "Product A",
+                        "qty": 1
+                    }, {
+                        "product": "Product B",
+                        "qty": 10
+                    }, {
+                        "product": "Product C",
+                        "qty": 5
+                    }, {
+                        "product": "Product D",
+                        "qty": 100
+                    }
+                ]
+            }
