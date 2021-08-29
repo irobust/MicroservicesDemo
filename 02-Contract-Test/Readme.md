@@ -22,7 +22,7 @@ npm install
 ```
 Start express ขึ้นมาด้วยคำสั่ง
 ```
-ืnpm start
+npm start
 ```
 
 เปิดดู service ที่ start ขึ้นมาได้ที่ http://localhost:3000
@@ -33,7 +33,7 @@ dredd ./apiblueprint/api.apib http://localhost:3000
 dredd ./openapi2/api.yml http://localhost:3000
 ```
 
-> Hook จะใช้ในการเพิ่มหรือลบข้อมูลใน Database ก่อนที่จะทำการทดสอบใน endpoint(้http method + uri) ต่างๆ
+> Hook จะใช้ในการเพิ่มหรือลบข้อมูลใน Database ก่อนที่จะทำการทดสอบใน endpoint(http method + uri) ต่างๆ
 
 ### ทดสอบ API Blueprint แบบมี hook
 ```

@@ -633,7 +633,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://host.docker.internal:3000"
+			"value": "http://localhost:3000"
 		}
 	]
 }
