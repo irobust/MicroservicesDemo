@@ -8,7 +8,7 @@
     - Supporting Concept
 
 ผลลัพธ์ที่ได้
-![Artifact from bounded context process](img/bound-context-example.png)
+![Artifact from bounded context process](imgs/bounded-context-example.png)
 
 2. Supporting Concept -> Contract 
     - apiblueprint (Design first)
