@@ -36,7 +36,7 @@ npm install faker
 ```
 3. Mock Product Service ด้วย Json-server
 ```
-docker run --name product-service --network kong-net  -p 3000:3000 -v ${PWD}/data williamyeh/json-server api.js
+docker run --rm --name product-service --network kong-net  -p 3000:3000 -v ${PWD}:/data williamyeh/json-server product-service.js
 ```
 
 Create Fake Order Service with Snowboard
