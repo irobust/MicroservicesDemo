@@ -41,7 +41,7 @@ docker run --rm --name product-service --network kong-net  -p 3000:3000 -v ${PWD
 
 Create Fake Order Service with Snowboard
 ```
-docker run -it -v ${PWD}:/doc -p 8087:8087 --rm quay.io/bukalapak/snowboard mock order.apib
+docker run --name=order-service --network kong-net -it -v ${PWD}:/doc -p 8087:8087 --rm quay.io/bukalapak/snowboard mock order.apib
 ```
 
 
