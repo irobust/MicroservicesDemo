@@ -69,5 +69,3 @@ check kong status
 curl http://localhost:8001
 curl http://localhost:8001/status
 ```
-
-

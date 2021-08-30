@@ -10,18 +10,18 @@
 
 ### Bounded Context
 สร้าง Flow การทำงานก่อนด้วย post-it สีม่วง แล้วใส่ application services (สีฟ้า) ที่ต้องมีเข้าไป สุดท้ายจับรวม services ต่างๆเข้าไปอยู่ใน context ด้วย post-it สีเหลือง
-    - Context
-    - Core Concept
-    - Supporting Concept
+- Context
+- Core Concept
+- Supporting Concept
 
 ผลลัพธ์ที่ได้
 ![Artifact from bounded context process](imgs/bounded-context-example.png)
 
 ### Create Contract (Contract Driven Development)
 นำ Supporting Concept(สีฟ้า) มาสร้าง contract ซึ่ง contract มี 3 รูปแบบ ดังนี้ 
-    - apiblueprint (Design first)
-    - openAPI (Code first)
-    - RAML
+- apiblueprint (Design first)
+- openAPI (Code first)
+- RAML
 
 ### Mocking service
 เมื่อเราได้่ Contract มาแล้วเราสามารถนำ Contract นั้นมาสร้าง Mockup หรือ API ตัวปลอมๆ ขึ้นมาได้ด้วยเครื่องมือต่างๆ ดังนี้
