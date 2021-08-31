@@ -28,6 +28,11 @@ Username: guest, Password: guest (default username and password)
 FROM rabbitmq:3.8.22-management-alpine
 RUN rabbitmq-plugins enable --offline rabbitmq_tracing
 ```
+build image ที่ต้องการด้วยคำสั่ง
+```
+docker build -t rabbitmq:3.8.22-tracing .
+docker run -d --hostname my-rabbit --name some-rabbit -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 rabbitmq:3.8.22-tracing
+```
 
 ### ตัวอย่าง Code สำหรับการใช้งาน 
 1. Download source code at https://github.com/squaremo/amqp.node
