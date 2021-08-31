@@ -2,8 +2,8 @@
 ## Set up RabbitMQ with Docker
 ### ติดตั้ง RabbitMQ ผ่านทาง Docker container ด้วยคำสั่ง
 ```
-docker pull rabbitmq:3.8.9-management
-docker run -d --hostname my-rabbit --name some-rabbit -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 rabbitmq:3.8.9-management
+docker pull rabbitmq:3.8.22-management-alpine
+docker run -d --hostname my-rabbit --name some-rabbit -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 rabbitmq:3.8.22-management-alpine
 ```
 
 ถ้าอยากกำหนด username และ password เองให้เพิ่ม option 2 ตัวนี้
@@ -25,7 +25,7 @@ Username: guest, Password: guest (default username and password)
 
 ### Customize Image(Install plugin rabbit_tracing สำหรับการเก็บ Log)
 ```
-FROM rabbitmq:3.8.9-management
+FROM rabbitmq:3.8.22-management-alpine
 RUN rabbitmq-plugins enable --offline rabbitmq_tracing
 ```
 
