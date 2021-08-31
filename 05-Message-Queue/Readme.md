@@ -19,9 +19,9 @@ docker run -d --hostname my-rabbit --name some-rabbit -p 5671:5671 -p 5672:5672 
 
 ### เปิด Management Console ได้ที่ http://localhost:15672
 Username: guest, Password: guest (default username and password)
-docker exec some-rabbit rabbitmqctl list_queues
-docker exec some-rabbit rabbitmq-plugins list
-docker exec some-rabbit rabbitmq-diagnostics status
+* docker exec some-rabbit rabbitmqctl list_queues
+* docker exec some-rabbit rabbitmq-plugins list
+* docker exec some-rabbit rabbitmq-diagnostics status
 
 ### Customize Image(Install plugin rabbit_tracing สำหรับการเก็บ Log)
 ```
