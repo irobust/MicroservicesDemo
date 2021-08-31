@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "rEv1HKq8IMHZxxOWm3//GKzVbG3NwAjKUwdwMUeRu/A9srkJlWsMSlAo/esbknW2jUNRc3xPVsGJqJ4/ECSjzw==",
+  "dgSpecHash": "wDMeWdT5pKY9ocPUl8Uc56XJrPzhZdzo/Hg1ziM7o30NmlCUrCreV38C7NioUzA0/eDH764RgC/PLhra9JeGLw==",
   "success": true,
   "projectFilePath": "/Users/phanupong/Documents/Workshop/Microservices/05-Message-Queue/OrderService/OrderService.csproj",
   "expectedPackageFiles": [
     "/Users/phanupong/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/phanupong/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/phanupong/.nuget/packages/rabbitmq.client/6.2.2/rabbitmq.client.6.2.2.nupkg.sha512",
     "/Users/phanupong/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "/Users/phanupong/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "/Users/phanupong/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "/Users/phanupong/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "/Users/phanupong/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "/Users/phanupong/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/Users/phanupong/.nuget/packages/system.threading.channels/4.7.1/system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }
