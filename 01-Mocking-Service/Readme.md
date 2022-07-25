@@ -25,7 +25,7 @@
 ## การ Mock Service โดยใช้ JSON Server
 ### ติดตั้ง json-server
 ```
-npm i -g json-server
+npm i --location=global json-server
 ```
 
 ### Fake product service
