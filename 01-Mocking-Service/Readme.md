@@ -10,18 +10,17 @@
 
 ## การ Mock Service โดยใช้ Api blueprint (Drakov)
 1. สร้างไฟล์ sample.apib (https://pastebin.com/U9dJzPKe)
-2. Install VSCode Extension (API Blueprint Viewer)
-3. npm i -g drakov
-4. drakov -f **/*.apib
-5. http://localhost:3000/order
+2. npm i --location-global drakov
+3. drakov -f **/*.apib
+4. http://localhost:3000/order
 
-## การ Mock Service โดยใช้ Api blueprint (Snowboard)
-1. docker pull quay.io/bukalapak/snowboard
-2. Change directory to /PATH TO sample.apib/
-3. docker run -it -v ${PWD}:/doc -p 8087:8087 --rm quay.io/bukalapak/snowboard mock sample.apib
-4. http://localhost:8087/order
-5. New Terminal
-6. docker run -it -v ${PWD}:/doc -p 8088:8088 --rm quay.io/bukalapak/snowboard http sample.apib
+## การใช้ VS Code Extensions ในการแสดงเอกสาร(contract)
+* Install VSCode Extension (API Blueprint Viewer)
+
+## การใช้ Aglio ในการแสดงเอกสาร(contract)
+1. npm i --location=global aglio
+2. aglio -i sample.apib -s -p 3001
+3. http://localhost:3001
 
 ## การ Mock Service โดยใช้ JSON Server
 ### ติดตั้ง json-server
