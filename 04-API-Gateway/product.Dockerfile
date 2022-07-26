@@ -2,5 +2,5 @@ FROM williamyeh/json-server
 WORKDIR /data
 COPY product-service.js .
 RUN ["npm", "install", "faker"]
-ENTRYPOINT [ "json-server", "product-service.js"]
+ENTRYPOINT [ "json-server", "--host", "0.0.0.0", "product-service.js"]
 EXPOSE 3000
