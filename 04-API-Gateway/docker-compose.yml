@@ -18,8 +18,6 @@ services:
       - 8001:8001
       - 8443:8443
       - 8444:8444
-    entrypoint: sh -c "wait-for.sh kong-database:9042 && kong migrations bootstrap && ./docker-entrypoint.sh kong docker-start"
-
   kong-ui:
     image: pantsel/konga:latest
     ports:
