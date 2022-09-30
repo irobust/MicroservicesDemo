@@ -53,10 +53,10 @@ docker-compose up -d
 
 ### Docker Compose Services
 1. Kong Database (Cassandra)
-2. Kong
-3. Konga (GUI for manage Kong)
-4. Product Service (Json-server)
-5. Order Services (apiblueprint)
+2. Kong - http://localhost:8001/status
+3. Konga (GUI for manage Kong) - http://localhost:1337
+4. Product Service (Json-server) - http://localhost:8087/orders
+5. Order Services (apiblueprint) - http://localhost:3000/products
 
 ## Kong Ports
 * 8000 -> Gateway
