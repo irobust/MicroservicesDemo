@@ -56,6 +56,15 @@ pm.variables.set('selected_data', selectedData)
 ```
 แต่เราจะนำไปใช้ได้แค่ {{slected_data}} เท่านั้น ไม่สามารถจะใช้ {{selected_data.content}} ได้
 
+การใช้ Dynamic variable ในหน้า pre-request script ต้องใช้คำสั่งแบบนี้
+```
+const gists = {}
+gists.description = pm.variables.replaceIn("{{$randomLoremWords}}");
+gists.content = pm.variables.replaceIn("{{$randomLoremWords}}");
+
+pm.variables.set("post", JSON.stringify(post));
+```
+
 
 ### Postman Test-case
 ทดสอบว่า http status ที่กลับมาเป็น 200 หรือไม่
