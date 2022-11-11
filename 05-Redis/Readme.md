@@ -7,7 +7,7 @@ docker run -p 6379:6379 --rm redis redis-server
 
 Run Redis CLI
 ```
-docker run -it --rm redis redis-cli -h host.docker.internal:6379
+docker run -it --rm redis redis-cli -h host.docker.internal
 ```
 ### Working with String
 ```
