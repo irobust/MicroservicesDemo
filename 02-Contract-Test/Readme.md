@@ -14,7 +14,7 @@ npm i -g dredd
 
 Start mongoDB จาก docker container ด้วยคำสั่ง
 ```
-docker run --name mongodb --rm -p 27017:27017 mongo
+docker run --name mongodb --rm -p 27017:27017 mongo:5
 ```
 ติดตั้ง Package ที่จะใช้ในตัวอย่างที่เขียนด้วย express (Node JS)
 ```
