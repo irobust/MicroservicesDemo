@@ -16,8 +16,11 @@ get [key]
 del [key]
 keys *
 keys c*
+rename [key] [newkey]
+renamex [key] [newkey] # check duplicate key
 incr [key]
 incrby [key]
+incrbyfloat [key] [value]
 decr [key]
 decrby [key]
 mset [key] [value] [key] [value] ...
