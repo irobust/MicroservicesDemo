@@ -2,8 +2,8 @@
 ## Set up RabbitMQ with Docker
 ### ติดตั้ง RabbitMQ ผ่านทาง Docker container ด้วยคำสั่ง
 ```
-docker pull rabbitmq:3.10.6-management-alpine
-docker run -d --hostname my-rabbit --name some-rabbit -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 rabbitmq:3.10.6-management-alpine
+docker pull rabbitmq:3.12.2-management
+docker run -d --hostname my-rabbit --name some-rabbit -p 5671:5671 -p 5672:5672 -p 15671:15671 -p 15672:15672 rabbitmq:3.12.2-management
 ```
 
 ถ้าอยากกำหนด username และ password เองให้เพิ่ม option 2 ตัวนี้
