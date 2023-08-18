@@ -13,6 +13,9 @@ docker run -it --rm redis redis-cli -h host.docker.internal
 ```
 set [Key] [Value]
 get [key]
+del [key]
+keys *
+keys c*
 incr [key]
 incrby [key]
 decr [key]
