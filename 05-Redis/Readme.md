@@ -74,3 +74,14 @@ zrevrange [key] [start] [stop] [score]
 zrevrangebyscore [key] [start] [stop]
 zrank [key] [member]
 ```
+
+### Publish and Subscribe
+Start subscriber instance
+```
+docker run -it --rm redis redis-cli -h host.docker.internal
+```
+
+```
+publish [chanel] [message]
+subscribe [chanel]
+```
