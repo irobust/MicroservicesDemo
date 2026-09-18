@@ -6,7 +6,7 @@ services:
     container_name: kong-postgres
     restart: on-failure
     volumes:
-      - kong_data:/var/lib/postgresql/data
+      - kong_data:/var/lib/postgresql
     environment:
       POSTGRES_USER: kong
       POSTGRES_PASSWORD: ${KONG_PG_PASSWORD:-kong}
